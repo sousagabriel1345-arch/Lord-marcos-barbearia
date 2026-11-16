@@ -1,0 +1,461 @@
+/* ========================
+lord marcos barbearia
+identidade visual======================== */
+:root { 
+    --grafite: #252525;
+    --cinza: #d1d1d1;
+    --azul: #0047ab;
+    --branco: #ffffff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: arial, sans-serif;
+    background-color: var(--grafite);
+    color: var(--branco);
+}
+/*=========================
+cabeçalho header======================== */
+.header {
+    width: 100%;
+    padding: 20px 5%;
+    background-color: var(--grafite);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+/*logo*/
+.logo {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+.logo span {
+    display: block;
+    color: var(--azul);
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+.menu {
+    display: flex;
+    gap: 30px;
+}
+.menu a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.menu a:hover{
+    color:var(--azul);
+}
+/*botão agendar*/
+.btn-agendar {
+    background: linear-gradient(90deg, #0047ab, #1677e8);
+    color: var(--branco);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-agendar:hover {
+    background: var(--branco);
+    color: var(--azul);
+    transform: scale(1.05);
+}
+/*=========================seção principal - hero======================== */
+.hero {
+  min-height:325px;
+    background-image:linear-gradient(90deg,rgba(37,37,37,0.65),rgba(37,37,37,0.15)), url("../assets/barbearia-hero.png.jpeg");
+    background-size: 100% 100%;
+    background-position: center 60%;
+    background-repeat: no-repeat;
+   
+}
+/*========================= conteudo do hero======================== */
+.hero-content {
+    width: 48%;
+    max-width: 550px;
+}
+.hero-content h1{
+    margin-bottom: 20px;
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 800;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+.hero-content h1 span{
+color:var(--azul);
+} 
+.hero-content p{
+    margin-bottom: 20px;
+    font-size: 19px;
+    color: #ffffff;
+    font-weight: 500;
+    line-height:1.6;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+}
+/* botão do hero */
+.hero-btn {
+    display:inline-block;
+
+    background: linear-gradient(90deg, #0047ab, #1677e8);
+    color: var(--branco);
+
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+.hero-btn:hover {
+    background: var(--branco);
+    color: var(--azul);
+    transform: scale(1.05);
+}
+/*========================= imagem  principal do hero======================== */
+.hero-image {
+    width: 48%;
+}
+.hero-image img {
+    width: 100%;
+    height:auto;
+    object-fit: contain;
+    border-radius: 15px;
+    display: block;
+}
+/*========================= responsividade - hero======================== */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .hero-content {
+        width: 100%;
+    }
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    .hero-image {
+        width: 100%;
+    }
+}
+/*========================= seção de serviços ======================== */
+.servicos{
+    padding: 80px 5%;
+    text-align:center;
+    background:linear-gradient(180deg,#252525,#383838);
+}
+.servicos h2{
+    font-size: 38px;
+    color: var(--branco);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    
+}
+.servicos-descricao{
+    font-size: 16px;
+    color: var(--cinza);
+    margin-bottom: 40px;
+}
+/*========================= container de serviços ======================== */
+.servicos-container{
+    display:flex;
+    justify-content:space-between;
+    gap:25px;
+}
+/* cartoes de servicos*/
+.servicos-card{
+    flex:1;
+    background-color:#303030;
+    padding:30px 20px;
+    border-radius:10px;
+}
+/*título dos cartoes*/
+.servicos-card h3 {
+    color: #ffffff;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+/*descrição dos cartoes*/
+.servicos-card p {
+    color: var(--cinza);
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+/*preços dos serviços*/
+.servico-card span {
+    display:block;
+    color:var(--azul);
+    font-size:24px;
+    font-weight:800;
+    margin-top:15px;
+}
+.servico-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.servico-tempo {
+    color:#81c9fa;
+    font-size:16px;
+    font-weight:600;
+    margin-top:8px;
+}
+/*efeito ao passar o mause*/
+.servico-card{
+    transition:transform 0.3s ease,box-shadow 0.3s ease;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    background-color: #3e4144;
+}
+.servico-card:hover {
+    transform:translatey(-8px);
+    background-color:#383838;
+    border: 1px solid var(--azul);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+}
+/*responsividade - serviços*/
+@media (max-width: 768px) {
+    .servicos-container {
+        flex-direction: column;
+    }
+    .equipe-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .equipe-card {
+        max-width: 100%;
+    }
+    .watsapp-float {
+       right: 15px;
+       bottom: 15px;
+       padding: 12px 16px;
+       font-size: 14px;
+    }
+}
+/*========================= seção nossa equipe ======================== */
+.equipe{
+    padding: 80px 5%;
+    text-align:center;
+    background:linear-gradient(180deg,#38383838,#25252525);
+}
+.equipe h2{
+    font-size: 36px;
+    color: var(--branco);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+.equipe-descricao{
+    font-size: 16px;
+    color: var(--cinza);
+    margin-bottom: 40px;
+}
+/*========================== container de equipe ======================== */
+.equipe-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+/*cartoes de equipe*/
+.equipe-card{
+    flex:1;
+    max-width: 300px;
+    background-color:#303030;
+    padding: 25px;
+    border-radius:10px;
+}
+/*fotos dos barbeiros*/
+.equipe-card img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+/*nome dos barbeiros*/
+.equipe-card h3{
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.equipe-card p{
+    color: #81c9fa;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+/*efeito nos cartoes daequipe*/
+.equipe-card{
+    transition:0.3s;
+}
+.equipe-card:hover {
+    transform:translatey(-8px);
+    background-color:#383838;
+    border: 1px solid var(--azul);
+}
+/*========================= seção de localização ======================== */
+.localizacao{
+    padding: 80px 5%;
+    text-align:center;
+    background-color:#303030;
+}
+.localizacao-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    margin-top:30px;
+  
+}
+.localizacao h2{
+    font-size: 36px;
+    color: var(--branco);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+.localizacao-descricao{
+    font-size: 16px;
+    color: var(--cinza);
+    margin-bottom: 40px;
+}
+/*informaçoes de localização*/
+.localizacao-info {
+    flex: 0 0 35%;
+    max-width:600px;
+    margin:0 auto;
+    padding:30px;
+    background-color:#252525;
+    border-radius:10px;
+}
+.localizacao-info h3 {
+    color: var(--branco);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.localizacao-info p {
+    color: var(--cinza);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+/*título do mapa*/
+.mapa {
+    flex: 1;
+   
+}
+.mapa h3 {
+    color: var(--branco);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+/*container do mapa*/
+.mapa-container {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    margin: 0 auto;
+    background-color: #252525;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mapa-container iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 10px;
+    display: block;
+}
+/*botão flutuante do watsapp*/
+.watsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    background-color: #25d366;
+    color: var(--branco);
+
+    padding: 15px 20px;
+    border-radius: 50px;
+
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+
+    transition: 0.3s;
+}
+.watsapp-float:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.08);
+}
+/*rodapé do site*/
+.footer{
+    background-color:#252525;
+    color:#ffffff;
+    padding:35px 20px;
+    text-align:center;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:1px;
+}
+.footer h2{
+    color:#0047ab;
+    font-size:28px;
+    font-weight:800;
+    margin-bottom:5px;
+}
+.footer p {
+    color:#d1d1d1;
+    font-size:15px;
+    margin-bottom:10px;
+}
+.footer .copyright{
+    margin-top:25px;
+    font-size:13px;
+}  
+@media (max-width: 768px) {
+    .localizacao-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .footer-copyright {
+        margin-top: 20px;
+        line-height: 1.5;
+    }
+}
