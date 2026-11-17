@@ -76,7 +76,7 @@ cabeçalho header======================== */
 /*=========================seção principal - hero======================== */
 .hero {
   min-height:325px;
-    background-image:linear-gradient(90deg,rgba(37,37,37,0.65),rgba(37,37,37,0.15)), url("barbearia-hero.jpg");
+    background-image:linear-gradient(90deg,rgba(37,37,37,0.65),rgba(37,37,37,0.15)), url("Barbearia-hero.jpg");
     background-size: 100% 100%;
     background-position: center 60%;
     background-repeat: no-repeat;
